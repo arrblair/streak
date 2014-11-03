@@ -1,0 +1,1 @@
+"wrap calls into function"
