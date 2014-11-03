@@ -35,10 +35,13 @@ commit_messages=("remove cruft" "add cruft" "add whitespace" \
 ## they don't have to be Python, they just need to be text appended to a file
 ## that reflects generically the nature of the commit message
 
-echo ${commit_messages[0]}
 
-selected_message=${commit_messages[$RANDOM % ${#commit_messages[@]} ] }
+selected_file=${commit_messages[$RANDOM % ${#commit_messages[@]} ] }
 
-(cd ~/projects/home/context && git add ~/projects/home/context/README.txt)
-(cd ~/projects/home/context && git commit -m "$selected_message")
-(cd ~/projects/home/context && git push origin master)
+commit_message=`head -1`
+commit_body=`sed -n '2,$p' $selected_file`
+echo $commit_body > WIP.sh
+
+(cd ~/projects/home/streak && git add ~/projects/home/streak/WIP.sh)
+(cd ~/projects/home/streak && git commit -m "$commit_message")
+(cd ~/projects/home/streak && git push origin master)
