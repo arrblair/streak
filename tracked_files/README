@@ -1,0 +1,5 @@
+In this directory, have files of general types that can be used for generalized types of commit operations.
+
+e.g. removes, alterations (of already committed code), ...
+
+Ultimately to supplant WIP.sh
