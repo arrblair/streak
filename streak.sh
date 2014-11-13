@@ -9,3 +9,5 @@ echo $commit_body > WIP.sh
 (cd ~/projects/home/streak && git add ~/projects/home/streak/WIP.sh)
 (cd ~/projects/home/streak && git commit -m "$commit_message")
 (cd ~/projects/home/streak && git push origin master)
+
+# (TODO): should probably end by performing some kind of commit text maintenance
