@@ -1,1 +1,2 @@
 "remove whitespace"
+sed '$d' commit_silos/whitespace_silo.txt
