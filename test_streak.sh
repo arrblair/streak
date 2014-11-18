@@ -1,4 +1,6 @@
 #!/bin/shell
+#
+# Test out commit messages, commands, & commit bodies together to make sure they work. 
 
 
 if [ $# -eq 0 ]; then
